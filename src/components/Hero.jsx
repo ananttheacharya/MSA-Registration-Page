@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+// Import assets
+import element1 from '../assets/images/element1.png';
+import element2 from '../assets/images/element2.png';
 
 const Hero = () => {
     return (
@@ -11,28 +14,113 @@ const Hero = () => {
             alignItems: 'center',
             textAlign: 'center',
             position: 'relative',
-            zIndex: 2
+            zIndex: 2,
+            overflow: 'hidden' // Ensure elements don't spill out
         }}>
+            {/* Floating Element 1 (Left/Top) */}
+            <motion.img
+                src={element1}
+                alt=""
+                initial={{ opacity: 0, x: -100, rotate: -20 }}
+                animate={{
+                    opacity: 0.6,
+                    x: [-50, 0, -50],
+                    y: [-20, 20, -20],
+                    rotate: [-10, 10, -10]
+                }}
+                transition={{
+                    opacity: { duration: 1 },
+                    x: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                    rotate: { duration: 10, repeat: Infinity, ease: "easeInOut" }
+                }}
+                style={{
+                    position: 'absolute',
+                    top: '10%',
+                    left: '10%',
+                    width: 'clamp(150px, 30vw, 400px)',
+                    zIndex: -1,
+                    filter: 'blur(10px)',
+                    mixBlendMode: 'screen'
+                }}
+            />
+
+            {/* Floating Element 2 (Right/Bottom) */}
+            <motion.img
+                src={element2}
+                alt=""
+                initial={{ opacity: 0, x: 100, rotate: 20 }}
+                animate={{
+                    opacity: 0.6,
+                    x: [50, 0, 50],
+                    y: [20, -20, 20],
+                    rotate: [10, -10, 10]
+                }}
+                transition={{
+                    opacity: { duration: 1 },
+                    x: { duration: 9, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+                    rotate: { duration: 12, repeat: Infinity, ease: "easeInOut" }
+                }}
+                style={{
+                    position: 'absolute',
+                    bottom: '10%',
+                    right: '10%',
+                    width: 'clamp(150px, 30vw, 400px)',
+                    zIndex: -1,
+                    filter: 'blur(8px)',
+                    mixBlendMode: 'screen'
+                }}
+            />
+
+            {/* Gradient Orb (Center) */}
+            <motion.div
+                animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.5, 0.3]
+                }}
+                transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+                style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '50vw',
+                    height: '50vw',
+                    background: 'radial-gradient(circle, rgba(80, 228, 254, 0.2) 0%, rgba(92, 46, 145, 0.1) 50%, transparent 70%)',
+                    borderRadius: '50%',
+                    zIndex: -2,
+                    filter: 'blur(60px)',
+                    pointerEvents: 'none'
+                }}
+            />
+
             <motion.h1
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: 'spring' }}
                 style={{
-                    fontSize: 'clamp(3rem, 10vw, 8rem)',
-                    fontFamily: 'var(--font-heading)',
-                    fontWeight: 800,
+                    fontSize: 'clamp(4rem, 12vw, 9rem)',
+                    fontFamily: 'var(--font-heading)', // TanCanard
+                    fontWeight: 'normal', // TanCanard usually inherently bold/stylized
                     color: 'var(--msa-white)',
                     lineHeight: 0.9,
-                    letterSpacing: '-2px',
+                    letterSpacing: '2px',
                     marginBottom: '1rem',
-                    textShadow: '0 0 30px rgba(80, 228, 254, 0.4)'
+                    textShadow: '0 0 30px rgba(80, 228, 254, 0.4)',
+                    position: 'relative',
+                    zIndex: 1
                 }}
             >
                 CODE <br />
                 <span style={{
                     color: 'transparent',
                     WebkitTextStroke: '2px var(--msa-cyan)',
-                    textShadow: 'none'
+                    textShadow: '0 0 10px var(--msa-cyan)'
                 }}>CRUSH</span> <br />
                 <span style={{ color: 'var(--msa-purple)' }}>1.0</span>
             </motion.h1>
@@ -46,7 +134,9 @@ const Hero = () => {
                     color: 'var(--msa-light-grey)',
                     maxWidth: '800px',
                     margin: '0 auto 2rem auto',
-                    lineHeight: 1.6
+                    lineHeight: 1.6,
+                    position: 'relative',
+                    zIndex: 1
                 }}
             >
                 <p>A FLAGSHIP 36 HOUR HACKATHON</p>
@@ -66,7 +156,9 @@ const Hero = () => {
                     padding: '1rem 2rem',
                     borderRadius: '50px',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
-                    backdropFilter: 'blur(10px)'
+                    backdropFilter: 'blur(10px)',
+                    position: 'relative',
+                    zIndex: 1
                 }}
             >
                 <div>

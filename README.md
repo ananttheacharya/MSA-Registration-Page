@@ -1,16 +1,41 @@
-# React + Vite
+# Code Crush 1.0 - MSA Registration Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Code Crush 1.0** registration portal, a flagship hackathon hosted by the Microsoft Student Ambassador chapter at BIT Jaipur.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Maximalist UI**: Web3-inspired design with neon gradients, glassmorphism, and floating animated elements.
+- **Interactive Timeline**: A vertical scroll experience detailing the event schedule for March 2026.
+- **Dedicated Registration**: A multi-step form for team and project submissions.
+- **Responsive Design**: Fully optimized for desktop and mobile devices.
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+2.  **Start Development Server**:
+    Run the provided batch script to handle environment variables automatically:
+    ```bash
+    start_dev.bat
+    ```
+    Or manually:
+    ```bash
+    npm run dev
+    ```
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components`: Reusable UI components (Hero, Timeline, Countdown, etc.)
+- `src/pages`: Page layouts (Home, RegisterPage)
+- `src/assets`: Images and Fonts (TANCANARD.otf, floating elements)
+- `src/index.css`: Global styles and CSS variables
+
+## Credits
+
+- **Fonts**: Tan-Canard (Headings), Outfit (Body)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+
+Built with ❤️ by the MSA Team.
