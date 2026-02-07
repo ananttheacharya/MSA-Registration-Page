@@ -1,0 +1,49 @@
+:root {
+  --msa-blue: #0177d7;
+  --msa-cyan: #50e4fe;
+  --msa-dark-blue: #263961;
+  --msa-purple: #5c2e91;
+  --msa-light-purple: #d49efe;
+  --msa-black: #0d0d0d;
+  --msa-white: #ffffff;
+  --msa-grey: #525252;
+  --msa-light-grey: #e6e6e6;
+
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--msa-black);
+  color: var(--msa-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--msa-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--msa-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--msa-cyan);
+}
