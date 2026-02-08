@@ -23,7 +23,11 @@ const AboutSection = () => {
                 >
                     <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--msa-cyan)', marginBottom: '1rem', fontSize: '2rem' }}>About MSA</h3>
                     <p style={{ lineHeight: '1.6', color: 'var(--msa-light-grey)' }}>
-                        Microsoft Student Ambassadors are a global group of on-campus ambassadors who are eager to help fellow students, lead in their local tech communities, and develop technical and career skills for the future. The BIT Jaipur Chapter is dedicated to fostering innovation and technical growth.
+                        The Microsoft Learn Student Ambassadors (MLSA) program is a global community of students who are passionate about technology and helping others. As Ambassadors, we are the on-campus leaders who learn the latest technologies, share our knowledge with peers, and build inclusive communities.
+
+                        <br /><br />
+
+                        At the BIT Jaipur Chapter, we are committed to empowering students by providing access to Microsoft resources, organizing hands-on workshops, hackathons like this one, and fostering a culture of innovation and collaboration. We believe in the power of technology to solve real-world problems and are dedicated to helping every student achieve more.
                     </p>
                 </motion.div>
 

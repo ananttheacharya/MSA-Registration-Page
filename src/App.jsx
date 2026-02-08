@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import FloatingBackground from './components/FloatingBackground';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import Timeline from './components/Timeline';
+import TeamCarousel from './components/TeamCarousel';
 import CountdownTimer from './components/CountdownTimer';
 import RegisterPage from './pages/RegisterPage';
 
@@ -14,36 +16,13 @@ const Home = () => {
     <div className="app-container" style={{ position: 'relative', minHeight: '100vh', overflowX: 'hidden' }}>
       <FloatingBackground />
 
-      <header style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '2rem 5%',
-        zIndex: 10,
-        position: 'relative'
-      }}>
-        <div style={{ fontWeight: 'bold', fontSize: '1.5rem', color: 'var(--msa-cyan)' }}>MSA</div>
-        <nav>
-          <ul style={{ display: 'flex', listStyle: 'none', gap: '2rem' }}>
-            {['About', 'Timeline'].map((item) => (
-              <li key={item}>
-                <a href={`#${item.toLowerCase()}`} style={{
-                  color: 'var(--msa-white)',
-                  textDecoration: 'none',
-                  fontWeight: 600
-                }}>
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <Hero />
         <AboutSection />
         <Timeline />
+        <TeamCarousel />
 
         <section style={{ padding: '4rem 5%', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', marginBottom: '2rem' }}>Ready to Crush It?</h2>
